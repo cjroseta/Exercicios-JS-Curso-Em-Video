@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-mz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar Numeros</title>
+    <style>
+        .div1 {
+            background-color: yellowgreen;
+            color: rgb(26, 15, 15);
+            font: normal 25px arial;
+            height: 300px;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .div1 h1 {
+            font: normal 40px verdana;
+            color: rgba(74, 74, 226, 0.808);
+            letter-spacing: 7px;
+        }
+
+        input {
+            font: normal 22px arial;
+            width: 130px;
+            height: 30px;
+            background-color: rgb(177, 67, 67);
+            color: white;
+            border: 0;
+            padding: 4px;
+            border-radius: 3px;
+        }
+
+        div#res {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <h1>Somando Valores</h1>
+        <input type="number" name="txtn1" title="Insira aqui o primeiro numero para fazer a soma." id="txtn1"> +
+        <input type="number" name="txtn2" title="Insira aqui o segundo numero para somar." id="txtn2">
+        <input type="button" value="Somar" title="Ao clicar mostra o resultado da soma entre os valores que inseriu."
+            onclick="somar()">
+        <div id="res">Resultado</div>
+    </div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} eh igual a <strong>${s}</strong>.`
+        }
+    </script>
+</body>
+
+</html>

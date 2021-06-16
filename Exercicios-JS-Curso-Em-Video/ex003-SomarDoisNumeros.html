@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(128, 128, 153);
+            /*Isso eh um comentario em CSS*/
+            color: white;
+            font: normal 22px Arial;
+        }
+
+        h1 {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ola, Mundo!</h1>
+    <!--Isso eh um comentario em HTML-->
+    <p>Ja me livrei da Maldicao...</p>
+
+    <script>
+        var n1 = Number(prompt('Digite um numero: ')); //Retorna string
+        var n2 = Number(window.prompt('Digite outro numero: ')) //Retorna string
+        var s = n1 + n2
+        alert(`A soma entre ${n1} e ${n2} eh igual a ${s}`) //Usando template string
+        //alert('A soma dos Valores eh de: ' + s.toString()) Para converter number em strin
+        //(number + number) o + eh para adicao
+        //(string + string) idem concatenacao
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-mz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando String</title>
+    <style>
+        body {
+            font: normal 23px arial;
+            background-color: yellowgreen;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var nome = window.prompt('Qual eh o seu nome?')
+        document.write(`Ola, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.</br>`)
+        document.write(`Seu nome em maiusculas eh ${nome.toUpperCase()}.</br>`)
+        document.write(`Seu nome em minusculas eh ${nome.toLowerCase()}.</br>`)
+
+        var num = Number(prompt('Insira um numero: '))
+        document.write(`O numero digitado eh: ${num}</br>`)
+        document.write(`Em duas casas decimais seria: ${num.toFixed(2)}</br>`)
+        document.write(`Em forma de moeda seria: ${num.toLocaleString('pt-Br', { style: 'currency', currency: 'Usd' })}`)
+    </script>
+</body>
+
+</html>

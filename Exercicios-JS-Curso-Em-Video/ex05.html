@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-*">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background-color: rgba(54, 54, 195, 0.719);
+            font: normal 18px arial;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ininiando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> no Javascript.</p>
+    <div>Clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] //Selecao do 1o paragrafo
+        var p2 = window.document.getElementsByTagName('p')[1] //Selecao do 2o paragrafo
+        window.document.write('No primeiro paragrafo esta escrito: ' + p1.innerText + '; e no segundo paragrafo: ' + p2.innerText)
+        p1.style.color = 'blue'
+        p2.style.color = 'red'
+        corpo.style.background = 'greenyellow'
+        window.alert(p1.innerText)
+        window.confirm(p2.innerText)
+    </script>
+</body>
+
+</html>

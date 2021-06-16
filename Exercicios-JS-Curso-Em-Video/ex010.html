@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtv = window.document.querySelector('input#txtvel'); //Para pegar o valor digitado da velocidade na caixa do input
+            var res = window.document.getElementById('res'); //Para exibir textos que serao gerados com o innerHTML
+            var vel = Number(txtv.value).toFixed(2); //Converter o valor que vem da caixa input, que vem em string, para number
+            res.innerHTML = `<p>A velocidade atual eh de <strong>${vel}Km/h</strong>.</p>`; //Se usar innerText nao ira mostrar os efeitos do html(paragrafo, strong)
+            if (vel > 60) {
+                res.innerHTML = '<p>Voce esta <strong>MULTADO</strong> por excesso de velocidade.</p>'
+            } //Mais uma vez uso += para adicionar algo na variavel res que eh ligada com o Id da div, porque se nao fizer isso, ela vai anular o texto de cima que eh juntado a ele
+            res.innerHTML += `<p>Dirija sempre usando sinto de seguranca!</p>` //+= serve para adicionar mais texto ao innerHTML
+            res.innerHTML += '<p>Alcool nao conbina com o vulante.</p>'
+            res.innerHTML += '<p>Se beber nao dirija e se dirigir nao beba.</p>'
+        }
+    </script>
+</body>
+
+</html>

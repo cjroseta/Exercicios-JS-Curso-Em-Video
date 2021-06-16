@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Velocidade</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.774);
+            font: normal 20px arial;
+            color: blanchedalmond;
+            text-align: center;
+            margin-top: 65px;
+        }
+
+        h1 {
+            letter-spacing: 20px;
+        }
+
+        input {
+            font: normal 22px arial;
+            width: 150px;
+            height: 30px;
+            background-color: rgba(9, 70, 202, 0.74);
+            color: rgb(211, 132, 132);
+            border: 3px solid rgb(195, 102, 65);
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.137);
+            line-height: 10px;
+        }
+
+        div#res {
+            margin-top: 25px;
+            background-color: rgb(195, 102, 65);
+            display: block;
+            font: bold 30px calibri;
+            color: rgba(14, 12, 12, 0.897);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Controle de Velocidade</h1>
+    <p>Insira a velocidade percorrida: <input type="number" name="txtvel" id="txtvel"><input type="button"
+            value="Requerer" onclick="requerer()"></p>
+
+    <div id="res">Resultado</div>
+
+    <script>
+        function requerer() {
+            var vel = document.getElementById('txtvel')
+            var res = document.querySelector('div#res')
+            var vel1 = Number(vel.value)
+            if (vel1 > 60) {
+                res.innerHTML = `A velocidade percorida eh de: ${vel1}km/h. </br> Voce ultrapassou a velocidade permitida. MULTADO!`
+            } else {
+                res.innerHTML = `A velocidade percorida eh de: ${vel1}km/h. </br> Dirija sempre usando o cinto de Seguranca!`
+            }
+        }
+    </script>
+</body>
+
+</html>

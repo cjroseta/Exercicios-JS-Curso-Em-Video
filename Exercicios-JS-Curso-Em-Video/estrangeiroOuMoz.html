@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Mocambicano</title>
+    <style>
+        body {
+            background-color: rgba(32, 8, 8, 0.548);
+            font: normal 20px arial;
+            color: blanchedalmond;
+            text-align: center;
+            margin-top: 65px;
+        }
+
+        h1 {
+            letter-spacing: 10px;
+        }
+
+        input {
+            font: normal 22px arial;
+            width: 150px;
+            height: 30px;
+            background-color: rgba(9, 70, 202, 0.74);
+            color: rgb(211, 132, 132);
+            border: 3px solid rgb(195, 102, 65);
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.137);
+            line-height: 10px;
+        }
+
+        div#res {
+            margin-top: 22px;
+            background-color: rgb(195, 102, 65);
+            display: block;
+            font: bold 30px calibri;
+            color: rgba(255, 255, 255, 0.808);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mocambicano ou Estrangeiro</h1>
+    Digite o pais: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar!" onclick="verificar()">
+    <div id="res">Resultado...</div>
+
+    <script>
+        function verificar() {
+            var pais1 = window.document.getElementById('txtpais').value
+            var res = window.document.getElementById('res')
+            res.innerText = ('Vivendo em ' + pais1)
+            if (pais1 == 'Mocambique') {
+                res.innerHTML += '<p>Voce eh <strong>Mocambicano!</strong></p>'
+            } else {
+                res.innerHTML += '<p>Voce eh <strong>ESTRANGEIRO</strong>.</p>'
+                res.innerHTML += '<p>Certifique-se de que a sua <strong>DOCUMENTACAO</strong> esta em dia.</p>'
+                res.innerHTML += '<p>Welcome to our country.</p>'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
